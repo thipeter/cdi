@@ -11,8 +11,8 @@ public class Main {
     public static void main(String args[]) {
         Weld weld = new Weld();
         WeldContainer container = weld.initialize();
-        AccountCaller accountCaller = container.instance().select(AccountCaller.class).get();
-        accountCaller.run();
+        CDIServiceCaller CDIServiceCaller = container.instance().select(CDIServiceCaller.class).get();
+        CDIServiceCaller.run();
         weld.shutdown();
     }
 }
